@@ -18,7 +18,7 @@ session = cnx.session()
 smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
 # st.text(smoothiefroot_response.json())
 # my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
-st.dataframe(smoothiefroot_response.json(), use_container_width=True)
+sf_df = st.dataframe(smoothiefroot_response.json(), use_container_width=True)
 
 ingredients_list = st.multiselect(
     "Choose up to five ingredients",
