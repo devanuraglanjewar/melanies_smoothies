@@ -22,7 +22,7 @@ session = cnx.session()
 
 ingredients_list = st.multiselect(
     "Choose up to five ingredients",
-    smoothiefroot_response,
+    # smoothiefroot_response,
     max_selections=5
 )
 
