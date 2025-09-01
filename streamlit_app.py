@@ -15,7 +15,7 @@ st.write("The name on your smoothie will be:", name_on_order)
 # session = get_active_session()
 cnx = st.connection('snowflake')
 session = cnx.session()
-smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+# smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
 # sf_df = st.dataframe(smoothiefroot_response.json(), use_container_width=True)
 # my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
 
