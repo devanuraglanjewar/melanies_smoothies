@@ -22,7 +22,7 @@ sf_df = st.dataframe(smoothiefroot_response.json(), use_container_width=True)
 
 ingredients_list = st.multiselect(
     "Choose up to five ingredients",
-    my_dataframe,
+    smoothiefroot_response,
     max_selections=5
 )
 
