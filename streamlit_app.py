@@ -23,7 +23,7 @@ session = cnx.session()
 ingredients_list = st.multiselect(
     "Choose up to five ingredients",
     # smoothiefroot_response,
-    max_selections=5
+    # max_selections=5
 )
 
 if ingredients_list:
@@ -32,8 +32,8 @@ if ingredients_list:
     for choosen_fruit in ingredients_list:
       ingredients_string += fruit_chosen + ' '
       st.subheader(fruit_chosen + 'Nutrition Information')
-      smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon" + fruit_chosen)
-      sf_df = st.dataframe(smoothiefroot_response.json(), use_container_width=True)
+      smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/" + fruit_chosen)
+      sf_df = st.dataframe(data = smoothiefroot_response.json(), use_container_width=True)
 
 
     my_insert_stmt = """ insert into smoothies.public.orders(ingredients,NAME_ON_ORDER) 
